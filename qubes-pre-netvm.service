@@ -1,0 +1,14 @@
+[Unit]
+Description=Netvm fixup
+Before=qubes-netvm.service
+
+[Service]
+ExecStart=/bin/sh -c 'echo -n "1" > /sys/bus/pci/devices/0000:02:00.1
+ExecStart=/bin/sh -c 'echo -n "1" > /sys/bus/pci/devices/0000:02:00.2
+ExecStart=/bin/sh -c 'echo -n "1" > /sys/bus/pci/devices/0000:02:00.3
+ExecStart=/bin/sh -c 'echo -n "1" > /sys/bus/pci/devices/0000:02:00.4
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
