@@ -3,10 +3,10 @@ Description=Netvm fixup
 Before=qubes-netvm.service
 
 [Service]
-ExecStart=/bin/sh -c 'echo -n "1" > /sys/bus/pci/devices/0000:02:00.1
-ExecStart=/bin/sh -c 'echo -n "1" > /sys/bus/pci/devices/0000:02:00.2
-ExecStart=/bin/sh -c 'echo -n "1" > /sys/bus/pci/devices/0000:02:00.3
-ExecStart=/bin/sh -c 'echo -n "1" > /sys/bus/pci/devices/0000:02:00.4
+ExecStart=/bin/sh -c 'echo -n "1" > /sys/bus/pci/devices/0000:02:00.1/remove'
+ExecStart=/bin/sh -c 'echo -n "1" > /sys/bus/pci/devices/0000:02:00.2/remove'
+ExecStart=/bin/sh -c 'echo -n "1" > /sys/bus/pci/devices/0000:02:00.3/remove'
+ExecStart=/bin/sh -c 'echo -n "1" > /sys/bus/pci/devices/0000:02:00.4/remove'
 Type=oneshot
 RemainAfterExit=yes
 
